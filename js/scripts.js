@@ -1,9 +1,15 @@
 $(document).ready(function() {
-  const over21 = confirm("Are you over 21? Click OK for yes or Cancel for no.");
+  const height = parseInt(prompt("How tall are you?(Put in a number)"));
 
-  if (over21) {
-    $('#drinks').show();
+  if (height < 81) {
+    $('#under-81cm').show();
+  } else if (height >= 81 && height <= 150) {
+      $('#over-81cm').show();
   } else {
-    $('#under-21').show();
+    $('#over-150cm').show();
   }
 });
+
+// && and
+
+// || or
